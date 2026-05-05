@@ -1,16 +1,124 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Әділзаң — Академия юридической помощи</title>
-    <meta name="description" content="Юридическая помощь в Казахстане: уголовные, административные и гражданские дела, жалобы, иски, претензии, сопровождение бизнеса." />
-    <meta property="og:title" content="Әділзаң — Академия юридической помощи" />
-    <meta property="og:description" content="Правовая защита граждан и бизнеса. Первичный разбор через WhatsApp." />
-    <meta property="og:image" content="/logo.png" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Әділзаң — Академия юридической помощи</title>
+  <meta name="description" content="Юридическая помощь в Казахстане: уголовные, административные и гражданские дела, жалобы, иски, претензии, сопровождение бизнеса." />
+  <style>
+    :root{
+      --navy:#071b3a; --navy2:#0d2d5c; --gold:#d5a436; --gold2:#f3c75f; --bg:#08152b; --white:#fff; --muted:#d5dbe8;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--white)}
+    a{text-decoration:none;color:inherit}.container{max-width:1180px;margin:0 auto;padding:0 20px}.topbar{position:sticky;top:0;z-index:20;background:rgba(8,21,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:52px;height:52px;object-fit:contain;border-radius:12px;background:#fff}.brand b{letter-spacing:.18em;color:var(--gold2);font-size:14px}.brand span{display:block;color:var(--muted);font-size:12px;margin-top:3px}.links{display:flex;gap:22px;color:#d8deeb;font-size:14px}.links a:hover{color:#fff}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:14px 20px;background:var(--gold2);color:#06142b;font-weight:800;border:0;cursor:pointer;box-shadow:0 14px 28px rgba(243,199,95,.18)}.btn:hover{background:#ffd56f}.btn.secondary{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.16);box-shadow:none}.hero{position:relative;overflow:hidden;padding:86px 0 70px}.hero:before{content:"";position:absolute;inset:-120px auto auto 50%;width:560px;height:560px;transform:translateX(-50%);background:radial-gradient(circle,rgba(213,164,54,.25),transparent 65%);filter:blur(8px)}.grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;position:relative}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(243,199,95,.35);background:rgba(243,199,95,.1);color:#ffe2a0;padding:10px 14px;border-radius:999px;font-size:14px}.hero h1{font-size:56px;line-height:1.06;margin:22px 0 18px;letter-spacing:-.04em}.hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:700px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.trust div{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.055);border-radius:18px;padding:16px;color:#e9edf6;font-size:14px}.card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.075);border-radius:30px;box-shadow:0 30px 60px rgba(0,0,0,.22)}.lead{padding:28px}.lead h2{font-size:28px;margin:0 0 10px}.lead p{font-size:14px;color:var(--muted);line-height:1.6}.topic{display:block;width:100%;text-align:left;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#eef3ff;border-radius:16px;padding:13px 15px;margin:10px 0;cursor:pointer}.topic.active,.topic:hover{border-color:var(--gold2);background:rgba(243,199,95,.14);color:#ffe9b2}.note{font-size:12px;color:#c8cfde;line-height:1.55;background:rgba(0,0,0,.2);padding:14px;border-radius:16px;margin-top:16px}.section{padding:70px 0}.eyebrow{color:var(--gold2);letter-spacing:.22em;text-transform:uppercase;font-weight:800;font-size:13px}.section h2{font-size:40px;line-height:1.15;margin:12px 0 14px;letter-spacing:-.03em}.section .intro{color:var(--muted);line-height:1.7;max-width:760px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.service{padding:24px}.icon{width:50px;height:50px;border-radius:16px;background:rgba(243,199,95,.14);display:flex;align-items:center;justify-content:center;font-size:25px;color:var(--gold2);margin-bottom:16px}.service h3{margin:0 0 10px;font-size:21px}.service p{margin:0;color:#cfd6e6;line-height:1.65;font-size:14px}.band{background:rgba(255,255,255,.045);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}.two{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:start}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.mini{padding:22px;background:rgba(3,12,28,.45);border:1px solid rgba(255,255,255,.09);border-radius:24px}.mini h3{margin:12px 0 8px}.mini p{margin:0;color:#cfd6e6;line-height:1.55;font-size:14px}.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.package{padding:26px}.package.featured{border-color:rgba(243,199,95,.45);background:rgba(243,199,95,.1)}.package h3{font-size:24px;margin:0}.price{font-size:24px;color:var(--gold2);font-weight:900;margin:10px 0 20px}.package ul{padding:0;margin:0 0 24px;list-style:none}.package li{margin:12px 0;color:#d9dfec;font-size:14px}.package li:before{content:"✓";color:var(--gold2);font-weight:900;margin-right:8px}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}.step{padding:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;color:#dce3ef;font-size:14px;line-height:1.5}.num{width:32px;height:32px;border-radius:50%;background:var(--gold2);color:#06142b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:12px}.gold{background:linear-gradient(135deg,#e5b64d,#ffdc75);color:#06142b}.gold .intro{color:#24314a}.goldbox{background:#071b3a;color:#fff;border-radius:26px;padding:26px}.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}.faq .card{padding:24px}.faq h3{margin:0 0 10px}.faq p{margin:0;color:#cfd6e6;line-height:1.6;font-size:14px}.contacts{display:grid;grid-template-columns:1fr .75fr;gap:28px}.contactbox{background:rgba(3,12,28,.52);border-radius:26px;padding:24px}.contact-row{border-bottom:1px solid rgba(255,255,255,.09);padding:14px 0}.contact-row:last-child{border-bottom:0}.contact-row small{display:block;color:#aeb9cf}.contact-row b{display:block;margin-top:4px}footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0;color:#aeb9cf;font-size:13px}.footer-flex{display:flex;justify-content:space-between;gap:20px}.mobile{display:none}
+    @media(max-width:900px){.links{display:none}.grid,.two,.contacts{grid-template-columns:1fr}.hero h1{font-size:40px}.trust,.service-grid,.packages,.steps,.faq{grid-template-columns:1fr}.mini-grid{grid-template-columns:1fr}.section h2{font-size:31px}.nav{height:auto;padding:12px 0}.brand img{width:46px;height:46px}.mobile{display:inline-flex}.desktop-btn{display:none}.footer-flex{flex-direction:column}.hero{padding-top:46px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="assets/logo.png" alt="Әділзаң логотип" />
+        <div><b>ӘДІЛЗАҢ</b><span>Академия юридической помощи</span></div>
+      </a>
+      <nav class="links">
+        <a href="#services">Услуги</a><a href="#about">О нас</a><a href="#business">Бизнесу</a><a href="#packages">Пакеты</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
+      </nav>
+      <a class="btn desktop-btn" id="topWa" href="#">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container grid">
+        <div>
+          <div class="badge">⚖️ Правовая защита граждан и бизнеса в Казахстане</div>
+          <h1>Юридическая помощь: от первичного разбора до суда и жалоб в госорганы</h1>
+          <p>ТОО «Академия юридической помощи Әділзаң» помогает по уголовным, административным и гражданским делам, готовит жалобы, иски, претензии и сопровождает клиентов на всех стадиях спора.</p>
+          <div class="actions">
+            <a class="btn wa" data-topic="консультация по делу" href="#">Получить первичный разбор →</a>
+            <a class="btn secondary" href="#services">Посмотреть услуги</a>
+          </div>
+          <div class="trust"><div>✓ УПК / КоАП / ГПК / АППК</div><div>✓ Документы и суд</div><div>✓ Для граждан и бизнеса</div></div>
+        </div>
+        <div class="card lead">
+          <h2>Опишите ситуацию</h2>
+          <p>Выберите тему, и WhatsApp откроется с готовым текстом обращения.</p>
+          <button class="topic active" data-topic="уголовное дело">уголовное дело</button>
+          <button class="topic" data-topic="административное дело / КоАП">административное дело / КоАП</button>
+          <button class="topic" data-topic="иск или судебный спор">иск или судебный спор</button>
+          <button class="topic" data-topic="жалоба на госорган">жалоба на госорган</button>
+          <button class="topic" data-topic="договор / возврат денег">договор / возврат денег</button>
+          <a class="btn wa" id="leadWa" data-topic="уголовное дело" style="width:100%;margin-top:16px" href="#">Написать в WhatsApp</a>
+          <div class="note">Первичный разбор не является гарантией результата. Итоговая стратегия определяется после изучения документов, сроков и доказательств.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="eyebrow">Направления</div>
+        <h2>Юридическая помощь по ключевым категориям дел</h2>
+        <p class="intro">Работа строится не вокруг общих обещаний, а вокруг процессуальных документов, сроков, доказательств и правильного порядка защиты.</p>
+        <div class="service-grid">
+          <div class="card service"><div class="icon">⚖️</div><h3>Уголовные дела</h3><p>Защита при задержании, допросах, мере пресечения, следствии и в суде. Жалобы по УПК РК и ходатайства.</p></div>
+          <div class="card service"><div class="icon">🚗</div><h3>Административные дела</h3><p>КоАП РК: ДТП, лишение водительских прав, 608 КоАП, 667 КоАП, обжалование постановлений.</p></div>
+          <div class="card service"><div class="icon">📄</div><h3>Гражданские споры</h3><p>Иски, отзывы, апелляции, взыскание ущерба, договорные споры, защита прав потребителей.</p></div>
+          <div class="card service"><div class="icon">🏛️</div><h3>Жалобы на госорганы</h3><p>Прокуратура, МВД, ДП, акиматы, АППК РК, обжалование бездействия и формальных отказов.</p></div>
+          <div class="card service"><div class="icon">🏠</div><h3>Застройщики и жильё</h3><p>Сроки передачи квартир, предварительные договоры, ДДУ, неустойка, претензии и переговоры.</p></div>
+          <div class="card service"><div class="icon">🎓</div><h3>Обучение</h3><p>Практические разборы для граждан, студентов и молодых юристов: жалобы, иски, ходатайства.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section band">
+      <div class="container two">
+        <div><div class="eyebrow">О нас</div><h2>Академия, где юридическая помощь соединена с правовым просвещением</h2><p class="intro">Әділзаң создана для практической помощи гражданам и бизнесу: от объяснения прав простым языком до подготовки процессуальных документов и сопровождения споров.</p><p class="intro">Подход: сначала документы и сроки, затем стратегия, затем процессуальное действие.</p></div>
+        <div class="mini-grid"><div class="mini"><div class="icon">🔎</div><h3>Анализ</h3><p>Проверяем документы, сроки, доказательства и слабые места позиции.</p></div><div class="mini"><div class="icon">📝</div><h3>Документы</h3><p>Готовим претензии, жалобы, иски, отзывы, апелляции и ходатайства.</p></div><div class="mini"><div class="icon">🛡️</div><h3>Защита</h3><p>Сопровождаем по делу и выстраиваем процессуальную линию.</p></div><div class="mini"><div class="icon">📚</div><h3>Обучение</h3><p>Объясняем гражданам и молодым юристам, как работает закон.</p></div></div>
+      </div>
+    </section>
+
+    <section id="business" class="section">
+      <div class="container two">
+        <div><div class="eyebrow">Бизнесу</div><h2>Юридическое сопровождение предпринимателей и ТОО</h2><p class="intro">Договоры, претензии, взыскание долгов, споры с контрагентами, ответы госорганам и судебная работа.</p><a class="btn wa" data-topic="юридическое сопровождение бизнеса" href="#">Обсудить сопровождение бизнеса</a></div>
+        <div class="mini-grid"><div class="mini"><h3>Договоры</h3><p>Проверка, разработка, риски, претензии.</p></div><div class="mini"><h3>Абонентское обслуживание</h3><p>Ежемесячная юридическая поддержка.</p></div><div class="mini"><h3>Споры</h3><p>Долги, акты, поставки, услуги, суд.</p></div><div class="mini"><h3>Ответы госорганам</h3><p>Письма, запросы, жалобы, правовая позиция.</p></div></div>
+      </div>
+    </section>
+
+    <section id="packages" class="section band">
+      <div class="container">
+        <div class="eyebrow">Пакеты</div><h2>Понятный формат работы</h2><p class="intro">Стоимость зависит от категории дела, объема документов, стадии процесса и срочности.</p>
+        <div class="packages"><div class="card package"><h3>Первичный разбор</h3><div class="price">от 15 000 ₸</div><ul><li>Анализ ситуации</li><li>Оценка рисков</li><li>План первого действия</li><li>Рекомендация по документам</li></ul><a class="btn wa" data-topic="первичный разбор" href="#">Выбрать пакет</a></div><div class="card package featured"><h3>Документ</h3><div class="price">от 40 000 ₸</div><ul><li>Претензия</li><li>Жалоба</li><li>Ходатайство</li><li>Иск / отзыв / апелляция</li></ul><a class="btn wa" data-topic="подготовка документа" href="#">Выбрать пакет</a></div><div class="card package"><h3>Сопровождение дела</h3><div class="price">индивидуально</div><ul><li>Досудебная стадия</li><li>Суд</li><li>Переговоры</li><li>Процессуальные действия</li></ul><a class="btn wa" data-topic="сопровождение дела" href="#">Выбрать пакет</a></div></div>
+      </div>
+    </section>
+
+    <section class="section"><div class="container"><div class="eyebrow">Процесс</div><h2>Как начинается работа</h2><div class="steps"><div class="step"><div class="num">1</div>Вы оставляете заявку и кратко описываете ситуацию.</div><div class="step"><div class="num">2</div>Мы определяем категорию дела, стадию и срочность.</div><div class="step"><div class="num">3</div>Проверяем документы, сроки и процессуальные риски.</div><div class="step"><div class="num">4</div>Предлагаем первый юридический шаг.</div><div class="step"><div class="num">5</div>Заключаем договор и начинаем работу.</div></div></div></section>
+
+    <section class="section gold"><div class="container two"><div><div class="eyebrow" style="color:#06142b">Академия</div><h2>Учитесь защищать свои права грамотно</h2><p class="intro">Проводим практические разборы: как составить претензию, жалобу, иск, ходатайство, апелляцию и как понимать ответы госорганов.</p></div><div class="goldbox"><h3>Главный принцип</h3><p>Мы не обещаем результат без изучения документов. Мы оцениваем перспективу, объясняем риски и предлагаем законный процессуальный путь.</p></div></div></section>
+
+    <section id="faq" class="section"><div class="container"><div class="eyebrow">FAQ</div><h2>Частые вопросы перед обращением</h2><div class="faq"><div class="card"><h3>Можно ли получить консультацию онлайн?</h3><p>Да. Первичный разбор можно провести через WhatsApp, телефон или онлайн-встречу. Для точной позиции нужны документы.</p></div><div class="card"><h3>Вы гарантируете результат?</h3><p>Нет. Гарантировать исход дела нельзя. Мы оцениваем перспективу, риски, доказательства и сроки.</p></div><div class="card"><h3>Сколько стоит ведение дела?</h3><p>Стоимость зависит от категории дела, объема документов, стадии процесса, срочности и количества действий.</p></div><div class="card"><h3>Можно ли заказать только документ?</h3><p>Да. Можно заказать претензию, жалобу, иск, отзыв, апелляцию, ходатайство или правовое заключение.</p></div></div></div></section>
+
+    <section id="contact" class="section band"><div class="container contacts"><div><div class="eyebrow">Контакты</div><h2>Нужна правовая позиция по делу?</h2><p class="intro">Напишите в WhatsApp, укажите город, стадию дела и какие документы есть. Мы определим первый шаг: консультация, претензия, жалоба, иск или сопровождение.</p><div class="actions"><a class="btn wa" data-topic="консультация по делу" href="#">Написать в WhatsApp</a><a class="btn secondary" href="https://instagram.com/" target="_blank">Instagram</a></div></div><div class="contactbox"><div class="contact-row"><small>Телефон / WhatsApp</small><b>+7 700 000 00 00</b></div><div class="contact-row"><small>Email</small><b>info@adilzan.kz</b></div><div class="contact-row"><small>Адрес</small><b>г. Астана, адрес офиса</b></div><div class="contact-row"><small>Формат</small><b>Очно и онлайн по Казахстану</b></div></div></div></section>
+  </main>
+
+  <footer><div class="container footer-flex"><div>© 2026 ТОО «Академия юридической помощи Әділзаң»</div><div>Информация на сайте не является гарантией исхода дела.</div></div></footer>
+
+  <script>
+    const WHATSAPP_NUMBER = '77000000000';
+    function wa(topic){
+      const text = encodeURIComponent(`Здравствуйте. Хочу получить первичный разбор по вопросу: ${topic}. Город: ____. Документы есть/нет: ____. Стадия дела: ____. Кратко ситуация: ____.`);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    }
+    document.querySelectorAll('.wa').forEach(a => a.href = wa(a.dataset.topic || 'консультация по делу'));
+    document.getElementById('topWa').href = wa('консультация по делу');
+    const topics = document.querySelectorAll('.topic');
+    const lead = document.getElementById('leadWa');
+    topics.forEach(btn => btn.addEventListener('click', () => {
+      topics.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      lead.href = wa(btn.dataset.topic);
+    }));
+  </script>
+</body>
 </html>
